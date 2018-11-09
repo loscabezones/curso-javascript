@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: num-to-string.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: num-to-string.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+
+/**  
+ * Dado el numero devuelve un string en ingles
+ * 
+ * @param {number} number - parametro numerico que recibe la funcion
+ * @returns {string} Nombre del numero en ingles
+ */
+function numToStringIfElse(number) {
+
+  var result;
+
+  // control de errores //
+  if (typeof number !== 'number') {
+    throw new Error('deve ser un numero');
+  } else {
+    if (number &lt; 0) {
+      throw new Error('deve ser un numero mayor a 0');
+    } else {
+      if (number > 10) {
+        throw new Error('deve ser un numero menor a 11');
+      } else {
+        if (number === 0) { result = 'zero'; }
+        if (number === 1) { result = 'one'; }
+        if (number === 2) { result = 'Two'; }
+        if (number === 3) { result = 'Three'; }
+        if (number === 4) { result = 'Four'; }
+        if (number === 5) { result = 'Five'; }
+        if (number === 6) { result = 'Six'; }
+        if (number === 7) { result = 'Seven'; }
+        if (number === 8) { result = 'Eight'; }
+        if (number === 9) { result = 'Nine'; }
+        if (number === 10) { result = 'Ten'; }
+
+        return result;
+      }
+    }
+  }
+
+}
+
+console.log(numToStringIfElse(10));
+
+
+/**  
+ * Dado el numero devuelve un string en ingles
+ * 
+ * @param {number} number - parametro numerico que recibe la funcion
+ * @returns {string} Nombre del numero en ingles
+ */
+function numToStringSwitchCase(number) {
+
+  var result;
+
+  // control de errores //
+  if (typeof number !== 'number') {
+    throw new Error('deve ser un numero');
+  } else {
+    if (number &lt; 0) {
+      throw new Error('deve ser un numero mayor a 0');
+    } else {
+      if (number > 10) {
+        throw new Error('deve ser un numero menor a 11');
+      } else {
+
+        switch (number) {
+          case 0:
+            result = 'zero';
+            break;
+          case 1:
+            result = 'one';
+            break;
+          case 2:
+            result = 'Two';
+            break;
+          case 3:
+            result = 'Three';
+            break;
+          case 4:
+            result = 'Four';
+            break;
+          case 5:
+            result = 'Five';
+            break;
+          case 6:
+            result = 'Six';
+            break;
+          case 7:
+            result = 'Seven';
+            break;
+          case 8:
+            result = 'Eight';
+            break;
+          case 9:
+            result = 'Nine';
+            break;
+          case 10:
+            result = 'Ten';
+            break;
+          default:
+            result = 'no es un numero entero';
+            break;
+        }
+        return result;
+      }
+    }
+  }
+
+}
+
+console.log(numToStringSwitchCase(10));
+
+
+/**  
+ * Dado el numero devuelve un string en ingles
+ * Solo usar un return y no se pueden usar else
+ * 
+ * @param {number} number - parametro numerico que recibe la funcion
+ * @returns {string} Nombre del numero en ingles
+ */
+
+function numToStringIfSinglereturn(number) {
+
+  var result;
+
+  // control de errores //
+  if (typeof number !== 'number') {
+    throw new Error('deve ser un numero');
+  }
+
+  if (number &lt; 0) {
+    throw new Error('deve ser un numero mayor a 0');
+  }
+
+  if (number > 10) {
+    throw new Error('deve ser un numero menor a 11');
+  }
+
+  if (number === 0) { result = 'zero'; }
+  if (number === 1) { result = 'one'; }
+  if (number === 2) { result = 'Two'; }
+  if (number === 3) { result = 'Three'; }
+  if (number === 4) { result = 'Four'; }
+  if (number === 5) { result = 'Five'; }
+  if (number === 6) { result = 'Six'; }
+  if (number === 7) { result = 'Seven'; }
+  if (number === 8) { result = 'Eight'; }
+  if (number === 9) { result = 'Nine'; }
+  if (number === 10) { result = 'Ten'; }
+
+  return result;
+
+}
+
+console.log(numToStringIfSinglereturn(10));
+
+
+/**  
+ * Dado el numero devuelve un string en ingles
+ * Se pueden usar multiples returns pero no se pueden usar else
+ * 
+ * @param {number} number - parametro numerico que recibe la funcion
+ * @returns {string} Nombre del numero en ingles
+ */
+
+function numToStringIfMultiplereturn(number) {
+
+
+  // control de errores //
+  if (typeof number !== 'number') {
+    throw new Error('deve ser un numero');
+  }
+
+  if (number &lt; 0) {
+    throw new Error('deve ser un numero mayor a 0');
+  }
+
+  if (number > 10) {
+    throw new Error('deve ser un numero menor a 11');
+  }
+
+  if (number === 0) { return 'zero'; }
+  if (number === 1) { return 'one'; }
+  if (number === 2) { return 'Two'; }
+  if (number === 3) { return 'Three'; }
+  if (number === 4) { return 'Four'; }
+  if (number === 5) { return 'Five'; }
+  if (number === 6) { return 'Six'; }
+  if (number === 7) { return 'Seven'; }
+  if (number === 8) { return 'Eight'; }
+  if (number === 9) { return 'Nine'; }
+  if (number === 10) { return 'Ten'; }
+
+}
+
+console.log(numToStringIfMultiplereturn(10));
+
+
+
+module.exports = {
+  numToStringIfElse: numToStringIfElse,
+  numToStringSwitchCase: numToStringSwitchCase,
+  numToStringIfSinglereturn: numToStringIfSinglereturn,
+  numToStringIfMultiplereturn: numToStringIfMultiplereturn
+
+};</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#numToStringIfElse">numToStringIfElse</a></li><li><a href="global.html#numToStringIfMultiplereturn">numToStringIfMultiplereturn</a></li><li><a href="global.html#numToStringIfSinglereturn">numToStringIfSinglereturn</a></li><li><a href="global.html#numToStringSwitchCase">numToStringSwitchCase</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Nov 09 2018 19:01:27 GMT+0100 (GMT+01:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
